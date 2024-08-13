@@ -11,7 +11,7 @@ function MovieInfo({}) {
   const imdbID = params.get("");
   const { movieinfo } = useParams();
   const [movies, setMovies] = useState([]);
-  const apikey = process.env.NEXT_PUBLIC_API_KEY;
+  const apikey = process.env.NEXT_PUBLIC_SOCIAL;
 
   console.log(movieinfo);
 

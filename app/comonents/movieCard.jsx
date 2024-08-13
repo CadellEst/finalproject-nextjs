@@ -9,7 +9,7 @@ import { getStaticProps } from "../layout";
 const MovieCard = () => {
   const { movieinfo } = useParams();
   const [movies, setMovies] = useState([]);
-  const apikey = process.env.NEXT_PUBLIC_API_KEY;
+  const apikey = process.env.NEXT_PUBLIC_SOCIAL;
 
 
   useEffect(() => {
