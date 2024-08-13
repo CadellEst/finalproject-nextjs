@@ -1,31 +1,26 @@
-import { Nav } from "./comonents/navComponent";
 import MovieCard from "./comonents/movieCard";
-
+import { Nav } from "./comonents/navComponent";
+import SearchBar from "./comonents/SearchBar";
+import { logo } from "../public/images/logo.png";
 
 export default function Home() {
   return (
     <>
-    <Nav />
-    <div className="flex items-center justify-center flex-col">
-      <div className="flex flex-col items-center">
-        <h1 className="p-4 text-[6vw] font-bold  ">Movie Viewers!</h1>
-        <h3 className="text-[3vw]">Real movie reviews and ratings</h3>
+      <Nav />
+      <div className="flex flex-col justify-center items-center p-10">
+        <img
+          className="hover:scale-105 invert animate-bounce"
+          src="https://i.pinimg.com/564x/1d/b3/09/1db30970fc762ca7190000b9c03fd294.jpg"
+          alt={logo}
+            
+          
+          width={150}
+          height={150}
+        />
+        <h1 className="font-bold text-2xl">Search Movies Today</h1>
       </div>
-      <br />
 
-      <br />
-      <div className="w-[80vw] flex justify-center items-center">
-        <ul className="flex text-xs md:text-base lg:text-xl text-center">
-          <li>Search Parameters </li>
-          <li>Search Parameters </li>
-          <li>Search Parameters </li>
-          <li>Search Parameters </li>
-          <li>Search Parameters </li>
-        </ul>
-      </div>
-      <br />
-      <MovieCard />
-    </div>
+      <SearchBar />
     </>
   );
 }

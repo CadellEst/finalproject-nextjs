@@ -18,6 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  height: 200vh;
   background: rgb(0, 0, 0);
   background: linear-gradient(
     180deg,

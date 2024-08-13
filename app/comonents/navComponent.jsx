@@ -6,8 +6,8 @@ export const Nav = () => {
       <div className=" flex flex-row items-center justify-between p-4 w-[80vw]">
         <div className="w-24 h-24 overflow-hidden">
           <img
-            className="invert scale-150"
-            src="https://t3.ftcdn.net/jpg/05/14/99/22/360_F_514992274_FDZh1OeglcIELoz1XbVwXVvmsGlqgy7n.jpg"
+            className="invert scale-80"
+            src="https://i.pinimg.com/564x/f5/79/d5/f579d531390fa2989754a1094071dbc3.jpg"
             alt=""
           />
         </div>
@@ -18,11 +18,7 @@ export const Nav = () => {
                 Home{""}
               </a>
             </ul>
-            <ul className="link hover:scale-110">
-              <a href="results" class="p-2">
-                Find movies
-              </a>
-            </ul>
+
           </div>
           <ul className="p-1 bg-purple-700 rounded-lg hover:bg-blue-500 hover:scale-110">
             <a href="contact">Contact</a>
