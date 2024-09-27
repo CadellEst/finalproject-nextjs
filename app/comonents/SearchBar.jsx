@@ -15,7 +15,7 @@ export default function SearchBar() {
 
   async function fetchMovies(searchTitle) {
     const { data } = await axios.get(
-      `http://www.omdbapi.com/?s=${searchTitle}&page=1&apikey=${apikey}`
+      `https://www.omdbapi.com/?s=${searchTitle}&page=1&apikey=${apikey}`
     );
     setMovies(data.Search);
    

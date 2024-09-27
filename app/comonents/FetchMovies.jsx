@@ -7,7 +7,7 @@ export default function FetchMovies() {
     useEffect(() => {
         async function fetchMovies() {
           const { data } = await axios.get(
-            `http://www.omdbapi.com/?s=${title}&apikey=${apikey}`
+            `https://www.omdbapi.com/?s=${title}&apikey=${apikey}`
           );
           setMovies(data);
         }
