@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -19,13 +19,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   height: 200vh;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(1, 24, 43, 1) 45%,
-    rgba(0, 78, 94, 1) 100%
-  );
+  background: rgb(7, 5, 19);
 }
 
 @layer utilities {

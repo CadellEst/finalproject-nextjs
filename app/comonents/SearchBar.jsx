@@ -39,7 +39,7 @@ export default function SearchBar() {
           type="text"
           value={searchTitle}
           onChange={((e) => setSearchTitle(e.target.value))}
-          onKeyPress={(e) => e.key === 'Enter' && onSearch() && setSearchTitle([])} 
+          onKeyUp={(e) => e.key === 'Enter' && onSearch() && setSearchTitle([])} 
           placeholder="Search Movies"
           id="id"
           className="
@@ -59,23 +59,25 @@ export default function SearchBar() {
 
       <div className="flex items-center justify-center">
         <div className="flex flex-wrap items-center justify-center w-[80vw] ">
-          {!searchTitle ? 
           <div>
-            <h1 className="p-6 text-4xl font-bold">Search for movies now!</h1>
+            <h1 className="p-6 text-4xl font-bold flex text-center">Search for movies now!</h1>
           </div>
+          <div className="flex flex-wrap sm:grid-cols-2 items-center justify-center max-w-[1000px] w-[100%]">
+
+          {!searchTitle ? "Loading..."
+          :
           
-          : 
           movies.flatMap((movie) => (
             <Link
-              href={`/${movie.imdbID}`}
-              key={movie.index}
-              className="hover:cursor-pointer hover:scale-110 transition-all"
+            href={`/${movie.imdbID}`}
+            key={movie.index}
+            className="hover:cursor-pointer hover:scale-110 transition-all"
             >
               <div
-                className="relative text-center p-4 w-[30vw] max-w-[200px]"
+                className="relative text-center p-4 w-[200px] max-w-[200px]"
                 key={movie.index}
-              >
-                <div className="rounded-lg overflow-hidden ">
+                >
+                <div className="rounded-lg overflow-hidden min height">
                   <img src={movie.Poster} alt="" />
                 </div>
                 <br />
@@ -85,7 +87,9 @@ export default function SearchBar() {
                 <div className="text-gray-400">{movie.Genre}</div>
               </div>
             </Link>
-          ))}
+          ))
+        }
+        </div>
         </div>
       </div>
       

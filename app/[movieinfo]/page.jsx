@@ -36,19 +36,19 @@ function MovieInfo({}) {
       <Nav />
       <SearchBar />
       <br className="" />
-      <div className="relative text-center p-10 flex items-center justify-center">
+      <div className="relative text-center p-10 flex items-center justify-center ">
         {!loading ? (
-          <>
-            <div className="rounded-lg overflow-hidden  ">
+          <div className="flex flex-col xl:flex-row items-center">
+            <div className="rounded-lg overflow-hidden min-w-[250px] max-w-[400px]">
               <div className="flex items-center justify-center">
                 <img
                   src={movies.Poster}
                   alt=""
-                  className="scale-75 md:scale-90 lg:scale-105 "
+                  className="scale-75 md:scale-90 :scale-105 "
                 />
               </div>
               <br />
-              <div className="lg:text-6xl md:text-4xl text-3xl ">
+              <div className="lg:text-6xl md:text-4xl text-3xl text-center">
                 {movies.Title}
               </div>
               <div className="text-gray-400 md:text-2xl text-xl lg:text-3xl">
@@ -59,7 +59,7 @@ function MovieInfo({}) {
               </div>
             </div>
 
-            <div className="w-[60vw] p-8 lg:text-2xl  md:text-xl text-md  max-w-[600px]">
+            <div className="min-w-[400px] p-8 lg:text-2xl  md:text-xl text-md  max-w-[800px] flex flex-col items-center justify-center">
               <div className="">
                 <span className="text-blue-400">Plot:</span> {movies.Plot}
               </div>
@@ -83,7 +83,7 @@ function MovieInfo({}) {
                 {movies.imdbRating}
               </div>
             </div>
-          </>
+          </div>
         ) : (
           <>
             <div className="rounded-lg overflow-hidden  ">

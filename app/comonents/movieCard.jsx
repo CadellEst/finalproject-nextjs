@@ -15,7 +15,7 @@ const MovieCard = () => {
   useEffect(() => {
     async function fetchMovies() {
       const { data } = await axios.get(
-        `http://www.omdbapi.com/?s=007&type=movie&page=1&apikey=${apikey}`
+        `https://www.omdbapi.com/?s=007&type=movie&page=1&apikey=${apikey}`
       );
       setMovies(data.Search);
       console.log(data);
